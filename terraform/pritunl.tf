@@ -40,9 +40,9 @@ resource "aws_security_group" "pritunl-sg" {
   }
 
   ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    from_port   = 16381
+    to_port     = 16381
+    protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
